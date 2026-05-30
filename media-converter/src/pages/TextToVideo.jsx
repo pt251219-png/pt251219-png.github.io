@@ -31,9 +31,8 @@ export default function TextToVideo() {
 
     setIsLoading(true)
     try {
-      // Giả lập tạo video
       setTimeout(() => {
-        alert('Trong bản miễn phí, tính năng tạo video yêu cầu cấu hình backend hoặc sử dụng API bên thứ 3!')
+        alert('Trong bản miễn phí, tính năng tạo video yêu cầu cấu hình backend hoặc sử dụng API bên thứ 3! Xem tài liệu để tìm hiểu thêm.')
         setIsLoading(false)
       }, 2000)
     } catch (error) {
@@ -47,7 +46,6 @@ export default function TextToVideo() {
     <div className="max-w-2xl mx-auto">
       <h2 className="text-3xl font-bold text-white mb-6">🎥 Chuyển Text Thành Video</h2>
 
-      {/* Title */}
       <div className="mb-6">
         <label className="block text-white font-semibold mb-2">Tiêu Đề Video</label>
         <input
@@ -59,7 +57,6 @@ export default function TextToVideo() {
         />
       </div>
 
-      {/* Content */}
       <div className="mb-6">
         <label className="block text-white font-semibold mb-2">Nội Dung</label>
         <textarea
@@ -70,9 +67,7 @@ export default function TextToVideo() {
         />
       </div>
 
-      {/* Settings */}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
-        {/* Background */}
         <div>
           <label className="block text-white font-semibold mb-2">Background</label>
           <select
@@ -86,7 +81,6 @@ export default function TextToVideo() {
           </select>
         </div>
 
-        {/* Music */}
         <div>
           <label className="block text-white font-semibold mb-2">Nhạc Nền</label>
           <select
@@ -101,7 +95,6 @@ export default function TextToVideo() {
         </div>
       </div>
 
-      {/* Preview Background */}
       <div className="mb-6">
         <label className="block text-white font-semibold mb-2">Xem Trước Background</label>
         <div className={`h-40 rounded-lg ${backgrounds.find(bg => bg.id === background)?.color} flex items-center justify-center text-white font-semibold`}>
@@ -109,7 +102,6 @@ export default function TextToVideo() {
         </div>
       </div>
 
-      {/* Buttons */}
       <div className="flex gap-4 flex-col md:flex-row">
         <button
           onClick={handleCreateVideo}
@@ -138,10 +130,9 @@ export default function TextToVideo() {
         </button>
       </div>
 
-      {/* Info */}
       <div className="mt-8 p-4 bg-blue-500/10 border border-blue-500/30 rounded-lg">
         <p className="text-blue-200 text-sm">
-          <strong>ℹ️ Lưu ý:</strong> Tính năng tạo video cần backend hoặc API OpenRouter. Vui lòng cấu hình thêm để sử dụng đầy đủ.
+          <strong>ℹ️ Lưu ý:</strong> Tính năng tạo video cần backend hoặc API bên thứ 3. Vui lòng cấu hình thêm để sử dụng đầy đủ.
         </p>
       </div>
     </div>
